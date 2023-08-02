@@ -189,7 +189,7 @@ def process_url(message):
 
     if is_user_subscribed(user_id):
         short_url = message.text.strip()
-        affiliate_tag =  user_affiliate_tags.get(user_id)
+        affiliate_tag =  user_affiliate_tags.get(str(user_id))
 
         unshortened_url = unshorten_url(short_url)
         bot.reply_to(message, f"Unshortened URL: {unshortened_url}")
