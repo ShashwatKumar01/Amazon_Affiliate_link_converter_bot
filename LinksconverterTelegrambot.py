@@ -172,7 +172,7 @@ def send_message_to_all(message_text, media):
 @bot.message_handler(commands=['showlist'])
 def show_user_lists(message):
     try:
-    with open(USER_FILE, 'r') as f:
+        with open(USER_FILE, 'r') as f:
         users_data = json.load(f)
     except json.JSONDecodeError:
         users_data = []
