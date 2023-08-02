@@ -170,16 +170,14 @@ def send_message_to_all(message_text, media):
 
 
 @bot.message_handler(commands=['showlist'])
-def show_user_lists(message):
-    try:
-        with open(USER_FILE, 'r') as f:
-            users_data = json.load(f)
-    except json.JSONDecodeError:
-        users_data = []
-    usercount = str(len(user_data))
-    userlists = str(user_data)
-    bot.reply_to(message, f"users lists are: {userlists} ")
-    bot.reply_to(message, f" number of users :{usercount}")
+def show_user_list(message):
+
+    if message.from_user.id == 849188964:
+        bot.reply_to(message, f"Here are the user list who have started the bot {users_data}")
+        count= len(users_data)
+        bot.reply_to(message,f"Total users count is : {count}")
+    else:
+        bot.reply_to(message, "You are not Authorized to see the users of the bot. Contact admin")
                  
     
 
