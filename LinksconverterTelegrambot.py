@@ -172,7 +172,8 @@ def send_message_to_all(message_text, media):
 @bot.message_handler(commands=['showlist'])
 def show_user_lists(message):
     usercount = len(user_data)
-    bot.reply_to(message, f"users lists are: {user_data} ")
+    userlists = str(user_data)
+    bot.reply_to(message, f"users lists are: {userlists} ")
     bot reply_to(message, f" number of users :{usercount}")
                  
     
