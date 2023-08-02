@@ -16,7 +16,7 @@ httpcore==0.17.3
 httpx==0.24.1
 hyperframe==6.0.1
 idna==3.4
-pandas==2.0.3
+pandas
 pycparser==2.21
 pyTelegramBotAPI==4.12.0
 python-dateutil==2.8.2
