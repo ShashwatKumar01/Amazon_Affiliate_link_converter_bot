@@ -68,7 +68,8 @@ def start(message):
     # user_status = bot.get_chat_member('@' + CHANNEL_USERNAME, user_id).status
     if is_user_subscribed(user_id):
         bot.reply_to(message, "Welcome! You have successfully subscribed to the channel. Now your bot can work.")
-        set_affiliate_tag(message)
+        bot.reply_to(message, "Now set your affiliate tag by the command /set_affiliate_tag")
+        #set_affiliate_tag(message)
 
     else:
         # bot.reply_to(message, "Please subscribe to the channel @deals_and_discounts_2 to use this bot.")
@@ -167,6 +168,14 @@ def send_message_to_all(message_text, media):
         else:
             bot.send_message(user_id, message_text)
 
+
+@bot.message_handler(commands=['showlist'])
+def show_user_lists(message):
+    usercount = len(user_data)
+    bot.reply_to(message, f"users lists are: {user_data} ")
+    bot reply_to(message, f" number of users :{usercount}")
+                 
+    
 
 ###################################################################################################################################
 
