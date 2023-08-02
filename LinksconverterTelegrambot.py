@@ -173,7 +173,7 @@ def send_message_to_all(message_text, media):
 def show_user_lists(message):
     try:
         with open(USER_FILE, 'r') as f:
-        users_data = json.load(f)
+            users_data = json.load(f)
     except json.JSONDecodeError:
         users_data = []
     usercount = str(len(user_data))
