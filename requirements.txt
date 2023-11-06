@@ -31,7 +31,7 @@ socksio==1.0.0
 soupsieve==2.4.1
 telebot==0.0.5
 telegram==0.0.1
-tornado==6.3.2
+tornado
 tzdata
 tzlocal
 urllib3
