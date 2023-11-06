@@ -22,7 +22,7 @@ pycparser==2.21
 pyTelegramBotAPI==4.12.0
 python-dateutil==2.8.2
 
-python-telegram-bot==20.4
+python-telegram-bot
 pytz==2023.3
 requests==2.31.0
 six==1.16.0
@@ -32,6 +32,6 @@ soupsieve==2.4.1
 telebot==0.0.5
 telegram==0.0.1
 tornado==6.3.2
-tzdata==2023.3
-tzlocal==5.0.1
-urllib3==2.0.4
+tzdata
+tzlocal
+urllib3
